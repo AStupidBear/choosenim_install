@@ -74,13 +74,13 @@ def get_link():
   result = None
   if platform.machine().startswith("armv"):
     arch = arch if arch == 64 else "v7l"
-    result = "https://github.com/nim-lang/nightlies/releases/download/latest-devel/linux_arm{}.tar.xz".format(arch)
+    result = "https://github.com/nim-lang/nightlies/releases/download/latest-version-2-0/linux_arm{}.tar.xz".format(arch)
   elif sys.platform.startswith("linux"):
-    result = "https://github.com/nim-lang/nightlies/releases/download/latest-devel/linux_x{}.tar.xz".format(arch)
+    result = "https://github.com/nim-lang/nightlies/releases/download/latest-version-2-0/linux_x{}.tar.xz".format(arch)
   elif sys.platform.startswith("win"):
-    result = "https://github.com/nim-lang/nightlies/releases/download/latest-devel/windows_x{}.zip".format(arch)
+    result = "https://github.com/nim-lang/nightlies/releases/download/latest-version-2-0/windows_x{}.zip".format(arch)
   elif sys.platform.startswith("darwin"):
-    result = "https://github.com/nim-lang/nightlies/releases/download/latest-devel/macosx_x{}.tar.xz".format(arch)
+    result = "https://github.com/nim-lang/nightlies/releases/download/latest-version-2-0/macosx_x{}.tar.xz".format(arch)
   assert result is not None, "Operating system or hardware architecture not supported or download not available or unkown network error."
   return result
 
